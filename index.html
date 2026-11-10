@@ -1,0 +1,3041 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#471327" />
+    <meta
+      name="description"
+      content="لافيا — مساحة خاصة لجمالكِ. خدمات الأظافر والشعر والعناية بالبشرة والجسم والمناسبات، وباقات وعروض تستحق التجربة."
+    />
+    <title>لافيا | جمالكِ… بطريقتكِ</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Tajawal:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" href="assets/hero.webp" as="image" type="image/webp" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#4A2C20" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="لافيا" />
+    <link rel="apple-touch-icon" href="icon.svg" />
+  </head>
+
+  <body>
+    <!-- ═══ PWA Install Modal ═══ -->
+    <div id="pwaInstallModal" class="pwa-modal" hidden aria-hidden="true">
+      <div class="pwa-backdrop" data-pwa-close></div>
+
+      <div
+        class="pwa-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="pwaTitle"
+      >
+        <button
+          type="button"
+          class="pwa-close"
+          data-pwa-close
+          aria-label="إغلاق"
+        >
+          ×
+        </button>
+
+        <div class="pwa-icon" aria-hidden="true">ل</div>
+
+        <h2 id="pwaTitle" class="pwa-title">ثبّتي تطبيق لافيا</h2>
+        <p class="pwa-subtitle">
+          تصفّحي خدماتنا، احجزي موعدكِ، واكتشفي الجديد — من شاشة هاتفكِ مباشرة،
+          حتى بدون فتح المتصفح.
+        </p>
+
+        <!-- زر التثبيت (Android / Chrome) -->
+        <div class="pwa-android">
+          <button type="button" class="pwa-install-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="vertical-align: -3px; margin-inline-end: 6px"
+            >
+              <path d="M12 3v12" />
+              <path d="m7 10 5 5 5-5" />
+              <path d="M5 21h14" />
+            </svg>
+            تثبيت التطبيق
+          </button>
+          <button type="button" class="pwa-later-btn" data-pwa-close>
+            لاحقاً
+          </button>
+        </div>
+
+        <!-- خطوات iOS -->
+        <div class="pwa-ios" hidden>
+          <div class="pwa-step">
+            <span class="pwa-step-num">١</span>
+            <span
+              >اضغطي زر المشاركة
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.9"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="vertical-align: -4px; margin-inline: 3px"
+              >
+                <path d="M12 3v12" />
+                <path d="m8 7 4-4 4 4" />
+                <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7" />
+              </svg>
+              في شريط Safari
+            </span>
+          </div>
+          <div class="pwa-step">
+            <span class="pwa-step-num">٢</span>
+            <span>اختاري <strong>"إضافة إلى الشاشة الرئيسية"</strong></span>
+          </div>
+          <div class="pwa-step">
+            <span class="pwa-step-num">٣</span>
+            <span
+              >اضغطي <strong>"إضافة"</strong> — وسيظهر التطبيق على شاشتكِ</span
+            >
+          </div>
+          <button type="button" class="pwa-later-btn" data-pwa-close>
+            فهمت
+          </button>
+        </div>
+      </div>
+    </div>
+    <svg
+      class="svg-sprite"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="i-arrow" viewBox="0 0 24 24">
+        <path d="M19 12H5m0 0 7-7m-7 7 7 7" />
+      </symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24">
+        <path d="m6 9 6 6 6-6" />
+      </symbol>
+      <symbol id="i-close" viewBox="0 0 24 24">
+        <path d="M5 5 19 19M19 5 5 19" />
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </symbol>
+      <symbol id="i-sparkles" viewBox="0 0 24 24">
+        <path
+          d="m12 2 2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2L12 2Z"
+        />
+      </symbol>
+      <symbol id="i-flower" viewBox="0 0 24 24">
+        <path
+          d="M12 8c-3-8-9-3-5 2-8-3-9 5-2 6-3 6 5 9 7 2 3 7 10 4 7-3 7-2 3-9-3-6 3-7-5-9-4-1Z"
+        />
+        <circle cx="12" cy="12" r="2" />
+      </symbol>
+      <symbol id="i-scissors" viewBox="0 0 24 24">
+        <circle cx="6" cy="6" r="3" />
+        <circle cx="6" cy="18" r="3" />
+        <path d="M8.4 8.4 20 20m-11.6-4.4L20 4" />
+      </symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="4" />
+        <path
+          d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+        />
+      </symbol>
+      <symbol id="i-crown" viewBox="0 0 24 24">
+        <path d="m3 7 5 4 4-6 4 6 5-4-2 12H5L3 7Z" />
+      </symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24">
+        <path
+          d="M20.6 8.6c0 5-8.6 11-8.6 11S3.4 13.6 3.4 8.6a4.5 4.5 0 0 1 8.6-1.7 4.5 4.5 0 0 1 8.6 1.7Z"
+        />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path d="m4.5 12 5 5L20 6.5" />
+      </symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="16" rx="2" />
+        <path d="M7 3v4m10-4v4M3 10h18" />
+      </symbol>
+      <symbol id="i-search" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="7" />
+        <path d="m16 16 5 5" />
+      </symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24">
+        <rect x="8" y="8" width="13" height="13" rx="2" />
+        <path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3" />
+      </symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 7v5l3 2" />
+      </symbol>
+      <symbol id="i-message" viewBox="0 0 24 24">
+        <path d="M21 11a9 9 0 0 1-13 8l-5 2 1.7-5A9 9 0 1 1 21 11Z" />
+      </symbol>
+      <symbol id="i-gift" viewBox="0 0 24 24">
+        <rect x="3" y="9" width="18" height="12" rx="2" />
+        <path
+          d="M12 9v12M3 13h18M12 9c-9 0-7-7-4-7 2 0 4 4 4 7Zm0 0c9 0 7-7 4-7-2 0-4 4-4 7Z"
+        />
+      </symbol>
+      <symbol id="i-camera" viewBox="0 0 24 24">
+        <path d="M3 7h4l2-3h6l2 3h4v13H3V7Z" />
+        <circle cx="12" cy="13" r="4" />
+      </symbol>
+    </svg>
+    <a class="skip-link" href="#content">انتقلي إلى المحتوى</a>
+    <div class="topline">
+      <span class="topline-dot"></span><span>لأن تفاصيلكِ تستحق كل الجمال</span
+      ><span class="topline-star">✳</span><span>عالمكِ الخاص في لافيا</span>
+    </div>
+    <nav id="nav" class="nav" aria-label="القائمة الرئيسية">
+      <div class="nav-shell container">
+        <a class="brand" href="#home" aria-label="لافيا - الرئيسية"
+          ><span class="brand-icon">ل</span
+          ><span
+            ><strong class="display">لافيا</strong
+            ><small>LAVIA BEAUTY LOUNGE</small></span
+          ></a
+        >
+        <div class="nav-menu" id="navMenu">
+          <a href="#home" class="nav-item">الرئيسية</a
+          ><a href="#moments" class="nav-item">عالم لافيا</a
+          ><a href="#services" class="nav-item">الخدمات</a
+          ><a href="#packages" class="nav-item">الباقات</a
+          ><a href="#offers" class="nav-item">العروض</a
+          ><a href="#gallery" class="nav-item">المعرض</a>
+        </div>
+        <div class="nav-tools">
+          <a href="#booking" class="nav-cta"
+            >احجزي موعدكِ
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-arrow" /></svg></a
+          ><button
+            id="mobileToggle"
+            class="nav-toggle"
+            aria-controls="mobilePanel"
+            aria-expanded="false"
+            aria-label="فتح القائمة"
+            type="button"
+          >
+            <svg class="icon" aria-hidden="true"><use href="#i-menu" /></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobilePanel" class="mobile-panel" hidden>
+        <a href="#home">الرئيسية</a><a href="#moments">عالم لافيا</a
+        ><a href="#services">خدماتنا</a><a href="#packages">الباقات</a
+        ><a href="#offers">العروض</a><a href="#gallery">معرض الصور</a
+        ><a href="#booking" class="mobile-book">احجزي موعدكِ</a>
+      </div>
+    </nav>
+    <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
+    <main id="content">
+      <header class="hero" id="home">
+        <div class="hero-ambient hero-ambient-a"></div>
+        <div class="hero-ambient hero-ambient-b"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="micro-label hero-enter" style="--d: 0.08s">
+              <span class="micro-star">✳</span> مرحبًا بكِ في عالم لافيا
+              <span class="micro-line"></span> YOUR BEAUTY SPACE
+            </div>
+            <h1 class="display hero-enter" style="--d: 0.16s">
+              مساحة<br />
+              <span class="italic-like">جمالكِ</span> الخاصة<span
+                class="pink-dot"
+                >.</span
+              >
+            </h1>
+            <p class="hero-lead hero-enter" style="--d: 0.3s">
+              هنا تُصبح العناية أجمل، والتفاصيل أقرب إليكِ. من لحظة الاسترخاء
+              إلى إطلالتكِ المفضلة، كل زيارة حكاية جمال جديدة.
+            </p>
+            <div class="hero-buttons hero-enter" style="--d: 0.43s">
+              <a href="#booking" class="btn btn-berry"
+                >احجزي لحظتكِ
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-arrow" /></svg></a
+              ><a href="#services" class="btn btn-ghost">تصفّحي الخدمات</a>
+            </div>
+            <div class="hero-evidence hero-enter" style="--d: 0.55s">
+              <span
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#i-sparkles" />
+                </svg>
+                8 أقسام متكاملة</span
+              ><span
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#i-heart" />
+                </svg>
+                عناية بتفاصيلكِ</span
+              >
+            </div>
+          </div>
+          <div class="hero-visual hero-enter" style="--d: 0.27s">
+            <div class="hero-photo">
+              <img
+                src="assets/hero.webp"
+                fetchpriority="high"
+                alt="تصور فني لأجواء صالون فاخر مع خدمة تصفيف الشعر"
+                width="1650"
+                height="929"
+              />
+              <div class="hero-photo-overlay"></div>
+            </div>
+            <div class="hero-seal">
+              <span>✳</span><strong>BEAUTY<br />IN EVERY<br />DETAIL</strong>
+            </div>
+            <div class="hero-float">
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-sparkles" /></svg
+              ><span><b>وقتكِ الجميل</b><small>يبدأ من هنا</small></span>
+            </div>
+            <span class="hero-doodle">✦</span>
+          </div>
+        </div>
+        <div class="hero-bot">
+          <span>THE LAVIA EXPERIENCE</span
+          ><a href="#moments" aria-label="استكشفي عالم لافيا"
+            >استكشفي المزيد <span>↓</span></a
+          >
+        </div>
+      </header>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-rail">
+          <span
+            >جمالكِ بطريقتكِ ✳ عناية من القلب ✳ تفاصيل تشبهكِ ✳ كل يوم فرصة
+            للدلال ✳ </span
+          ><span
+            >جمالكِ بطريقتكِ ✳ عناية من القلب ✳ تفاصيل تشبهكِ ✳ كل يوم فرصة
+            للدلال ✳
+          </span>
+        </div>
+      </div>
+      <section id="moments" class="section moments">
+        <div class="container">
+          <div class="section-head split reveal">
+            <div>
+              <span class="kicker">01 / عالم لافيا</span>
+              <h2 class="section-title display">
+                لكل تفاصيلكِ… <em>لمسة.</em>
+              </h2>
+            </div>
+            <p>
+              أيًّا كانت مناسبتكِ أو مزاجكِ اليوم، ستجدين تفاصيل جميلة صُمّمت
+              لتناسبكِ.
+            </p>
+          </div>
+          <div class="moment-grid">
+            <a
+              href="#service-hair"
+              class="moment-card reveal"
+              aria-label="تصفحي الشعر"
+              ><img
+                src="assets/hero-portrait.webp"
+                alt="صورة توضيحية لخدمات الشعر"
+                loading="lazy"
+                width="560"
+                height="700" /><span class="moment-shade"></span
+              ><span class="moment-number">01</span
+              ><span class="moment-label"
+                ><strong>الشعر</strong
+                ><small>تسريحات وألوان تستحق أن تُرى</small></span
+              ><span class="moment-arrow"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#i-arrow" /></svg></span
+            ></a>
+            <a
+              href="#service-manicure"
+              class="moment-card reveal"
+              aria-label="تصفحي الأظافر"
+              ><img
+                src="assets/nails-portrait.webp"
+                alt="صورة توضيحية لخدمات الأظافر"
+                loading="lazy"
+                width="560"
+                height="700" /><span class="moment-shade"></span
+              ><span class="moment-number">02</span
+              ><span class="moment-label"
+                ><strong>الأظافر</strong
+                ><small>تفاصيل تليق بأناقتكِ</small></span
+              ><span class="moment-arrow"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#i-arrow" /></svg></span
+            ></a>
+            <a
+              href="#service-skin"
+              class="moment-card reveal"
+              aria-label="تصفحي البشرة والسبا"
+              ><img
+                src="assets/facial-portrait.webp"
+                alt="صورة توضيحية لخدمات البشرة والسبا"
+                loading="lazy"
+                width="560"
+                height="700" /><span class="moment-shade"></span
+              ><span class="moment-number">03</span
+              ><span class="moment-label"
+                ><strong>البشرة والسبا</strong
+                ><small>لحظة استرخاء، أثرها طويل</small></span
+              ><span class="moment-arrow"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#i-arrow" /></svg></span
+            ></a>
+            <a
+              href="#service-bridal"
+              class="moment-card reveal"
+              aria-label="تصفحي المناسبات"
+              ><img
+                src="assets/bride-portrait.webp"
+                alt="صورة توضيحية لخدمات المناسبات"
+                loading="lazy"
+                width="560"
+                height="700" /><span class="moment-shade"></span
+              ><span class="moment-number">04</span
+              ><span class="moment-label"
+                ><strong>المناسبات</strong
+                ><small>جمالكِ في أجمل أيامكِ</small></span
+              ><span class="moment-arrow"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#i-arrow" /></svg></span
+            ></a>
+          </div>
+        </div>
+      </section>
+      <section id="services" class="section services">
+        <div class="container">
+          <div class="section-head split reveal">
+            <div>
+              <span class="kicker">02 / قائمة الخدمات</span>
+              <h2 class="section-title display">
+                كل شيء لجمالكِ، <em>في مكان واحد.</em>
+              </h2>
+            </div>
+            <p>
+              ثمانية أقسام تضم جميع الخدمات التي تبحثين عنها. افتحي القسم
+              لتتعرفي على التفاصيل، واختاري ما يناسبكِ.
+            </p>
+          </div>
+          <div class="service-search-box reveal">
+            <label for="serviceSearch">ابحثي عن خدمة تناسبكِ</label>
+            <div class="service-search">
+              <svg class="icon" aria-hidden="true"><use href="#i-search" /></svg
+              ><input
+                id="serviceSearch"
+                type="search"
+                placeholder="جرّبي: قص أطراف، بديكير سبا، تنظيف بشرة..."
+                autocomplete="off"
+              /><button type="button" id="clearSearch" hidden>مسح</button>
+            </div>
+            <span id="serviceResults">8 أقسام للعناية والجمال</span>
+          </div>
+          <div class="catalog-grid" id="catalog">
+            <article
+              class="catalog-card reveal"
+              id="service-manicure"
+              data-cat="manicure"
+              data-title="المناكير"
+            >
+              <button
+                class="catalog-head"
+                type="button"
+                aria-expanded="false"
+                aria-controls="services-manicure"
+              >
+                <span class="catalog-icon"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-flower" /></svg></span
+                ><span class="catalog-titles"
+                  ><small>01 · 16 خدمة</small
+                  ><strong class="display">المناكير</strong
+                  ><span>لمسة لون… تكمّل أناقتكِ</span></span
+                ><span class="catalog-open"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-chevron" /></svg
+                ></span>
+              </button>
+              <div class="catalog-panel" id="services-manicure" hidden>
+                <p>ألوان منسجمة وتفاصيل دقيقة لأظافر تعبّر عنكِ.</p>
+                <ul class="catalog-list">
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="manicure"
+                      data-service="مانيكير الأيدي"
+                    >
+                      مانيكير الأيدي
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="manicure"
+                      data-service="مانيكير كلاسيك"
+                    >
+                      مانيكير كلاسيك
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="manicure"
+                      data-service="تنظيف وترتيب الأظافر"
+                    >
+                      تنظيف وترتيب الأظافر
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="manicure"
+                      data-service="تنظيف الجلد الميت حول الأظافر"
+                    >
+                      تنظيف الجلد الميت حول الأظافر
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="manicure"
+                      data-service="قص وبرد الأظافر"
+                    >
+                      قص وبرد الأظافر
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="manicure"
+                      data-service="إزالة مناكير"
+                    >
+                      إزالة مناكير
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="manicure"
+                      data-service="إزالة أظافر تركيب"
+                    >
+                      إزالة أظافر تركيب
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="manicure"
+                      data-service="لون أظافر"
+                    >
+                      لون أظافر
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="manicure"
+                      data-service="لون فرنش"
+                    >
+                      لون فرنش
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="manicure"
+                      data-service="تقوية الأظافر"
+                    >
+                      تقوية الأظافر
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="manicure"
+                      data-service="تركيب أظافر"
+                    >
+                      تركيب أظافر
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="manicure"
+                      data-service="تمديد أظافر"
+                    >
+                      تمديد أظافر
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="manicure"
+                      data-service="رسم وزخرفة الأظافر"
+                    >
+                      رسم وزخرفة الأظافر
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="manicure"
+                      data-service="تزيين الأظافر"
+                    >
+                      تزيين الأظافر
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="manicure"
+                      data-service="كروم للأظافر"
+                    >
+                      كروم للأظافر
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="manicure"
+                      data-service="لمعة وتوب كوت"
+                    >
+                      لمعة وتوب كوت
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+                <p class="service-note">
+                  اختاري أي خدمة للانتقال إلى طلب الموعد.
+                </p>
+              </div>
+            </article>
+            <article
+              class="catalog-card reveal"
+              id="service-pedicure"
+              data-cat="pedicure"
+              data-title="البديكير والعناية بالقدمين"
+            >
+              <button
+                class="catalog-head"
+                type="button"
+                aria-expanded="false"
+                aria-controls="services-pedicure"
+              >
+                <span class="catalog-icon"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-flower" /></svg></span
+                ><span class="catalog-titles"
+                  ><small>02 · 17 خدمة</small
+                  ><strong class="display">البديكير والعناية بالقدمين</strong
+                  ><span>لخطواتٍ أجمل كل يوم</span></span
+                ><span class="catalog-open"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-chevron" /></svg
+                ></span>
+              </button>
+              <div class="catalog-panel" id="services-pedicure" hidden>
+                <p>عناية هادئة من أطراف قدميكِ حتى تفاصيل استرخائكِ.</p>
+                <ul class="catalog-list">
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="pedicure"
+                      data-service="بديكير الأرجل"
+                    >
+                      بديكير الأرجل
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="pedicure"
+                      data-service="بديكير كلاسيك"
+                    >
+                      بديكير كلاسيك
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="pedicure"
+                      data-service="بديكير سبا"
+                    >
+                      بديكير سبا
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="pedicure"
+                      data-service="تنظيف وترتيب أظافر القدمين"
+                    >
+                      تنظيف وترتيب أظافر القدمين
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="pedicure"
+                      data-service="قص وبرد أظافر القدمين"
+                    >
+                      قص وبرد أظافر القدمين
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="pedicure"
+                      data-service="إزالة الجلد الميت"
+                    >
+                      إزالة الجلد الميت
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="pedicure"
+                      data-service="تنظيف الكعبين"
+                    >
+                      تنظيف الكعبين
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="pedicure"
+                      data-service="ترطيب القدمين"
+                    >
+                      ترطيب القدمين
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="pedicure"
+                      data-service="علاج تشققات الكعبين"
+                    >
+                      علاج تشققات الكعبين
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="pedicure"
+                      data-service="نقع القدمين"
+                    >
+                      نقع القدمين
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="pedicure"
+                      data-service="تقشير القدمين"
+                    >
+                      تقشير القدمين
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="pedicure"
+                      data-service="ماسك للقدمين"
+                    >
+                      ماسك للقدمين
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="pedicure"
+                      data-service="مساج القدمين"
+                    >
+                      مساج القدمين
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="pedicure"
+                      data-service="عناية كاملة بالقدمين"
+                    >
+                      عناية كاملة بالقدمين
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="pedicure"
+                      data-service="لون أظافر القدمين"
+                    >
+                      لون أظافر القدمين
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="pedicure"
+                      data-service="لون فرنش للقدمين"
+                    >
+                      لون فرنش للقدمين
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="pedicure"
+                      data-service="إزالة مناكير القدمين"
+                    >
+                      إزالة مناكير القدمين
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+                <p class="service-note">
+                  اختاري أي خدمة للانتقال إلى طلب الموعد.
+                </p>
+              </div>
+            </article>
+            <article
+              class="catalog-card reveal"
+              id="service-brows"
+              data-cat="brows"
+              data-title="الحواجب والوجه"
+            >
+              <button
+                class="catalog-head"
+                type="button"
+                aria-expanded="false"
+                aria-controls="services-brows"
+              >
+                <span class="catalog-icon"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-sparkles" /></svg></span
+                ><span class="catalog-titles"
+                  ><small>03 · 10 خدمة</small
+                  ><strong class="display">الحواجب والوجه</strong
+                  ><span>تفاصيل صغيرة… فرق كبير</span></span
+                ><span class="catalog-open"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-chevron" /></svg
+                ></span>
+              </button>
+              <div class="catalog-panel" id="services-brows" hidden>
+                <p>لمسات خفيفة تمنح ملامحكِ توازنًا وإشراقة.</p>
+                <ul class="catalog-list">
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="brows"
+                      data-service="تنظيف حواجب"
+                    >
+                      تنظيف حواجب
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="brows"
+                      data-service="تحديد حواجب"
+                    >
+                      تحديد حواجب
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="brows"
+                      data-service="تشقير حواجب"
+                    >
+                      تشقير حواجب
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="brows"
+                      data-service="صبغة حواجب"
+                    >
+                      صبغة حواجب
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="brows"
+                      data-service="تشقير وصبغة حواجب"
+                    >
+                      تشقير وصبغة حواجب
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="brows"
+                      data-service="فتلة الوجه"
+                    >
+                      فتلة الوجه
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="brows"
+                      data-service="شمع الوجه"
+                    >
+                      شمع الوجه
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="brows"
+                      data-service="صبغة شارب"
+                    >
+                      صبغة شارب
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="brows"
+                      data-service="إزالة شعر الذقن"
+                    >
+                      إزالة شعر الذقن
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="brows"
+                      data-service="تنظيف شعر الوجه بالخيط"
+                    >
+                      تنظيف شعر الوجه بالخيط
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+                <p class="service-note">
+                  اختاري أي خدمة للانتقال إلى طلب الموعد.
+                </p>
+              </div>
+            </article>
+            <article
+              class="catalog-card reveal"
+              id="service-hair"
+              data-cat="hair"
+              data-title="الشعر"
+            >
+              <button
+                class="catalog-head"
+                type="button"
+                aria-expanded="false"
+                aria-controls="services-hair"
+              >
+                <span class="catalog-icon"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-scissors" /></svg></span
+                ><span class="catalog-titles"
+                  ><small>04 · 27 خدمة</small
+                  ><strong class="display">الشعر</strong
+                  ><span>شعر يشبهكِ… ويُعبّر عنكِ</span></span
+                ><span class="catalog-open"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-chevron" /></svg
+                ></span>
+              </button>
+              <div class="catalog-panel" id="services-hair" hidden>
+                <p>من القصات إلى الألوان والعلاجات، أسلوبكِ يبدأ هنا.</p>
+                <ul class="catalog-list">
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="غسيل شعر"
+                    >
+                      غسيل شعر
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="حمام زيت"
+                    >
+                      حمام زيت
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="ماسك شعر"
+                    >
+                      ماسك شعر
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="قص أطراف"
+                    >
+                      قص أطراف
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="قص غرة وتحديد الشعر"
+                    >
+                      قص غرة وتحديد الشعر
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="قص ستايل"
+                    >
+                      قص ستايل
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="استشوار قصير"
+                    >
+                      استشوار قصير
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="استشوار وسط"
+                    >
+                      استشوار وسط
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="استشوار طويل"
+                    >
+                      استشوار طويل
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="استشوار ويفي"
+                    >
+                      استشوار ويفي
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="تسريحة شعر"
+                    >
+                      تسريحة شعر
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="فير / لف شعر"
+                    >
+                      فير / لف شعر
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="صبغة شيب"
+                    >
+                      صبغة شيب
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="صبغة جذور"
+                    >
+                      صبغة جذور
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="صبغة كاملة"
+                    >
+                      صبغة كاملة
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="صبغة أطراف"
+                    >
+                      صبغة أطراف
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="هايلايت"
+                    >
+                      هايلايت
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="خصل"
+                    >
+                      خصل
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="سحب لون"
+                    >
+                      سحب لون
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="تونر"
+                    >
+                      تونر
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="علاج وترميم الشعر"
+                    >
+                      علاج وترميم الشعر
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="كولاجين الشعر"
+                    >
+                      كولاجين الشعر
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="فيلر الشعر"
+                    >
+                      فيلر الشعر
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="بروتين / كيراتين"
+                    >
+                      بروتين / كيراتين
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="علاج الشعر الجاف"
+                    >
+                      علاج الشعر الجاف
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="علاج الشعر التالف"
+                    >
+                      علاج الشعر التالف
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="hair"
+                      data-service="رفع الشعر وتسريحات مناسبات"
+                    >
+                      رفع الشعر وتسريحات مناسبات
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+                <p class="service-note">
+                  اختاري أي خدمة للانتقال إلى طلب الموعد.
+                </p>
+              </div>
+            </article>
+            <article
+              class="catalog-card reveal"
+              id="service-skin"
+              data-cat="skin"
+              data-title="البشرة"
+            >
+              <button
+                class="catalog-head"
+                type="button"
+                aria-expanded="false"
+                aria-controls="services-skin"
+              >
+                <span class="catalog-icon"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-sun" /></svg></span
+                ><span class="catalog-titles"
+                  ><small>05 · 14 خدمة</small
+                  ><strong class="display">البشرة</strong
+                  ><span>إشراقتكِ لها طقوسها</span></span
+                ><span class="catalog-open"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-chevron" /></svg
+                ></span>
+              </button>
+              <div class="catalog-panel" id="services-skin" hidden>
+                <p>جلسات متنوّعة للعناية ببشرتكِ بالطريقة التي تحبينها.</p>
+                <ul class="catalog-list">
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="skin"
+                      data-service="تنظيف بشرة عادي"
+                    >
+                      تنظيف بشرة عادي
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="skin"
+                      data-service="تنظيف بشرة عميق"
+                    >
+                      تنظيف بشرة عميق
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="skin"
+                      data-service="تنظيف بشرة هيدرافيشل"
+                    >
+                      تنظيف بشرة هيدرافيشل
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="skin"
+                      data-service="تنظيف بشرة بالبخار"
+                    >
+                      تنظيف بشرة بالبخار
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="skin"
+                      data-service="تقشير البشرة"
+                    >
+                      تقشير البشرة
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="skin"
+                      data-service="ماسك للوجه"
+                    >
+                      ماسك للوجه
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="skin"
+                      data-service="ترطيب عميق"
+                    >
+                      ترطيب عميق
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="skin"
+                      data-service="عناية حول العين"
+                    >
+                      عناية حول العين
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="skin"
+                      data-service="علاج الرؤوس السوداء"
+                    >
+                      علاج الرؤوس السوداء
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="skin"
+                      data-service="تنظيف المسام"
+                    >
+                      تنظيف المسام
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="skin"
+                      data-service="عناية خاصة بالبشرة الدهنية"
+                    >
+                      عناية خاصة بالبشرة الدهنية
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="skin"
+                      data-service="ماسك تفتيح وترطيب"
+                    >
+                      ماسك تفتيح وترطيب
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="skin"
+                      data-service="تقشير إنزيمي"
+                    >
+                      تقشير إنزيمي
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="skin"
+                      data-service="عناية بالبشرة الحساسة"
+                    >
+                      عناية بالبشرة الحساسة
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+                <p class="service-note">
+                  اختاري أي خدمة للانتقال إلى طلب الموعد.
+                </p>
+              </div>
+            </article>
+            <article
+              class="catalog-card reveal"
+              id="service-spa"
+              data-cat="spa"
+              data-title="الجسم والسبا"
+            >
+              <button
+                class="catalog-head"
+                type="button"
+                aria-expanded="false"
+                aria-controls="services-spa"
+              >
+                <span class="catalog-icon"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-sparkles" /></svg></span
+                ><span class="catalog-titles"
+                  ><small>06 · 14 خدمة</small
+                  ><strong class="display">الجسم والسبا</strong
+                  ><span>وقتٌ لكِ… وبس</span></span
+                ><span class="catalog-open"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-chevron" /></svg
+                ></span>
+              </button>
+              <div class="catalog-panel" id="services-spa" hidden>
+                <p>تجارب راحة واستجمام تُعيد إلى يومكِ توازنه.</p>
+                <ul class="catalog-list">
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="spa"
+                      data-service="مساج جسم كامل"
+                    >
+                      مساج جسم كامل
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="spa"
+                      data-service="مساج استرخاء"
+                    >
+                      مساج استرخاء
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="spa"
+                      data-service="مساج سويدي"
+                    >
+                      مساج سويدي
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="spa"
+                      data-service="مساج أحجار ساخنة"
+                    >
+                      مساج أحجار ساخنة
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="spa"
+                      data-service="دلكة سودانية"
+                    >
+                      دلكة سودانية
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="spa"
+                      data-service="حمام مغربي"
+                    >
+                      حمام مغربي
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="spa"
+                      data-service="تقشير الجسم"
+                    >
+                      تقشير الجسم
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="spa"
+                      data-service="ترطيب الجسم"
+                    >
+                      ترطيب الجسم
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="spa"
+                      data-service="عناية باليدين"
+                    >
+                      عناية باليدين
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="spa"
+                      data-service="عناية بالقدمين"
+                    >
+                      عناية بالقدمين
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="spa"
+                      data-service="حمام بخار للجسم"
+                    >
+                      حمام بخار للجسم
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="spa"
+                      data-service="تقشير بالأملاح"
+                    >
+                      تقشير بالأملاح
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="spa"
+                      data-service="ماسك للجسم"
+                    >
+                      ماسك للجسم
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="spa"
+                      data-service="ترطيب عميق للجسم"
+                    >
+                      ترطيب عميق للجسم
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+                <p class="service-note">
+                  اختاري أي خدمة للانتقال إلى طلب الموعد.
+                </p>
+              </div>
+            </article>
+            <article
+              class="catalog-card reveal"
+              id="service-wax"
+              data-cat="wax"
+              data-title="الواكس وإزالة الشعر"
+            >
+              <button
+                class="catalog-head"
+                type="button"
+                aria-expanded="false"
+                aria-controls="services-wax"
+              >
+                <span class="catalog-icon"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-flower" /></svg></span
+                ><span class="catalog-titles"
+                  ><small>07 · 13 خدمة</small
+                  ><strong class="display">الواكس وإزالة الشعر</strong
+                  ><span>نعومة تُريحكِ</span></span
+                ><span class="catalog-open"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-chevron" /></svg
+                ></span>
+              </button>
+              <div class="catalog-panel" id="services-wax" hidden>
+                <p>خيارات مختلفة للعناية بنعومة بشرتكِ.</p>
+                <ul class="catalog-list">
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="wax"
+                      data-service="واكس الوجه"
+                    >
+                      واكس الوجه
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="wax"
+                      data-service="واكس الشارب"
+                    >
+                      واكس الشارب
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="wax"
+                      data-service="واكس الذقن"
+                    >
+                      واكس الذقن
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="wax"
+                      data-service="واكس اليدين كاملة"
+                    >
+                      واكس اليدين كاملة
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="wax"
+                      data-service="واكس نصف يد"
+                    >
+                      واكس نصف يد
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="wax"
+                      data-service="واكس الأرجل كاملة"
+                    >
+                      واكس الأرجل كاملة
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="wax"
+                      data-service="واكس الأرجل حتى الركبة"
+                    >
+                      واكس الأرجل حتى الركبة
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="wax"
+                      data-service="واكس الإبط"
+                    >
+                      واكس الإبط
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="wax"
+                      data-service="واكس الجسم كامل"
+                    >
+                      واكس الجسم كامل
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="wax"
+                      data-service="واكس الظهر"
+                    >
+                      واكس الظهر
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="wax"
+                      data-service="واكس البطن"
+                    >
+                      واكس البطن
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="wax"
+                      data-service="واكس أصابع اليدين"
+                    >
+                      واكس أصابع اليدين
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="wax"
+                      data-service="واكس أصابع القدمين"
+                    >
+                      واكس أصابع القدمين
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+                <p class="service-note">
+                  اختاري أي خدمة للانتقال إلى طلب الموعد.
+                </p>
+              </div>
+            </article>
+            <article
+              class="catalog-card reveal"
+              id="service-bridal"
+              data-cat="bridal"
+              data-title="المناسبات والتجميل"
+            >
+              <button
+                class="catalog-head"
+                type="button"
+                aria-expanded="false"
+                aria-controls="services-bridal"
+              >
+                <span class="catalog-icon"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-crown" /></svg></span
+                ><span class="catalog-titles"
+                  ><small>08 · 9 خدمة</small
+                  ><strong class="display">المناسبات والتجميل</strong
+                  ><span>إطلالة تستحق اللحظة</span></span
+                ><span class="catalog-open"
+                  ><svg class="icon" aria-hidden="true">
+                    <use href="#i-chevron" /></svg
+                ></span>
+              </button>
+              <div class="catalog-panel" id="services-bridal" hidden>
+                <p>مكياج وتسريحات للأيام التي تبقى في الذاكرة.</p>
+                <ul class="catalog-list">
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="bridal"
+                      data-service="مكياج ناعم"
+                    >
+                      مكياج ناعم
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="bridal"
+                      data-service="مكياج سهرة"
+                    >
+                      مكياج سهرة
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="bridal"
+                      data-service="مكياج كامل"
+                    >
+                      مكياج كامل
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="bridal"
+                      data-service="مكياج عروس"
+                    >
+                      مكياج عروس
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="bridal"
+                      data-service="تسريحة شعر بسيطة"
+                    >
+                      تسريحة شعر بسيطة
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="bridal"
+                      data-service="تسريحة مناسبات"
+                    >
+                      تسريحة مناسبات
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="bridal"
+                      data-service="تسريحة شعر فخمة"
+                    >
+                      تسريحة شعر فخمة
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="bridal"
+                      data-service="تسريحة عروس"
+                    >
+                      تسريحة عروس
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="service-pick"
+                      data-category="bridal"
+                      data-service="تنسيق شعر ومكياج"
+                    >
+                      تنسيق شعر ومكياج
+                      <svg class="icon" aria-hidden="true">
+                        <use href="#i-arrow" />
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+                <p class="service-note">
+                  اختاري أي خدمة للانتقال إلى طلب الموعد.
+                </p>
+              </div>
+            </article>
+          </div>
+          <p id="emptyServices" class="search-empty" hidden>
+            لم نعثر على خدمة بهذا الاسم. جرّبي كلمة مختلفة.
+          </p>
+          <div class="services-foot">
+            <svg class="icon" aria-hidden="true"><use href="#i-heart" /></svg>
+            لم تجدي الخدمة التي تبحثين عنها؟ اتركي لنا ملاحظة في طلب الموعد.
+          </div>
+        </div>
+      </section>
+      <section class="bridal-showcase">
+        <div class="container bridal-layout">
+          <div class="bridal-photo reveal">
+            <img
+              src="assets/bride.webp"
+              alt="تصور فني لتجهيز عروس وتسريحة شعر أنيقة"
+              loading="lazy"
+              width="1200"
+              height="900"
+            /><span class="bridal-corner">LAVIA BRIDAL</span>
+          </div>
+          <div class="bridal-text reveal">
+            <span class="kicker light">عالم العروس والمناسبات</span>
+            <div class="bridal-decoration">✳</div>
+            <h2 class="display">
+              لليوم الذي<br />
+              <em>لا يشبه سواه.</em>
+            </h2>
+            <p>
+              من أول لمسة مكياج إلى آخر خصلة شعر… تفاصيل منسّقة تمنحكِ إطلالة
+              تحبين تذكّرها في كل صورة.
+            </p>
+            <a
+              href="#booking"
+              data-request="ليلة العمر"
+              data-kind="باقة"
+              class="btn btn-ivory"
+              >اكتشفي باقة العروس
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg
+            ></a>
+          </div>
+        </div>
+      </section>
+      <section class="section packages" id="packages">
+        <div class="container">
+          <div class="section-head centered reveal">
+            <span class="kicker">03 / باقات مميّزة</span>
+            <h2 class="section-title display">دلالكِ… <em>على مزاجكِ.</em></h2>
+            <p>
+              اقتراحات تجمع لكِ خدمات متناسقة في تجربة واحدة. يمكن تعديل المحتوى
+              والسعر مع إدارة الصالون قبل الإعلان عن الباقات رسميًا.
+            </p>
+          </div>
+          <div class="bundle-grid">
+            <article class="bundle-card reveal">
+              <div class="bundle-top">
+                <span>01 <em> / THE SOFT TOUCH</em></span>
+              </div>
+              <div class="bundle-symbol">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-sparkles" />
+                </svg>
+              </div>
+              <h3 class="display">لمسة ناعمة</h3>
+              <p class="bundle-subtitle">لإطلالة مرتبة في كل يوم</p>
+              <ul>
+                <li>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-check" /></svg
+                  >مانيكير كلاسيك
+                </li>
+                <li>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-check" /></svg
+                  >بديكير كلاسيك
+                </li>
+                <li>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-check" /></svg
+                  >لون أظافر
+                </li>
+              </ul>
+              <div class="bundle-bottom">
+                <span>السعر والتفاصيل عند التواصل</span
+                ><a
+                  class="bundle-btn"
+                  href="#booking"
+                  data-request="لمسة ناعمة"
+                  data-kind="باقة"
+                  >اختاري هذه الباقة
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-arrow" /></svg
+                ></a>
+              </div>
+            </article>
+            <article class="bundle-card bundle-featured reveal">
+              <div class="bundle-top">
+                <span>02 <em> / EVERYDAY RADIANCE</em></span
+                ><b class="bundle-label">باقة مختارة</b>
+              </div>
+              <div class="bundle-symbol">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-sparkles" />
+                </svg>
+              </div>
+              <h3 class="display">تألّقكِ اليومي</h3>
+              <p class="bundle-subtitle">تفاصيل متناسقة من الشعر إلى الوجه</p>
+              <ul>
+                <li>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-check" /></svg
+                  >غسيل شعر
+                </li>
+                <li>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-check" /></svg
+                  >قص أطراف
+                </li>
+                <li>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-check" /></svg
+                  >استشوار وسط
+                </li>
+                <li>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-check" /></svg
+                  >تحديد حواجب
+                </li>
+              </ul>
+              <div class="bundle-bottom">
+                <span>السعر والتفاصيل عند التواصل</span
+                ><a
+                  class="bundle-btn"
+                  href="#booking"
+                  data-request="تألّقكِ اليومي"
+                  data-kind="باقة"
+                  >اختاري هذه الباقة
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-arrow" /></svg
+                ></a>
+              </div>
+            </article>
+            <article class="bundle-card reveal">
+              <div class="bundle-top">
+                <span>03 <em> / THE SPA RITUAL</em></span>
+              </div>
+              <div class="bundle-symbol">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-sparkles" />
+                </svg>
+              </div>
+              <h3 class="display">طقوس الاسترخاء</h3>
+              <p class="bundle-subtitle">امنحي نفسكِ مساحة من الراحة</p>
+              <ul>
+                <li>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-check" /></svg
+                  >تنظيف بشرة عميق
+                </li>
+                <li>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-check" /></svg
+                  >تقشير الجسم
+                </li>
+                <li>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-check" /></svg
+                  >مساج استرخاء
+                </li>
+              </ul>
+              <div class="bundle-bottom">
+                <span>السعر والتفاصيل عند التواصل</span
+                ><a
+                  class="bundle-btn"
+                  href="#booking"
+                  data-request="طقوس الاسترخاء"
+                  data-kind="باقة"
+                  >اختاري هذه الباقة
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-arrow" /></svg
+                ></a>
+              </div>
+            </article>
+            <article class="bundle-card reveal">
+              <div class="bundle-top">
+                <span>04 <em> / BRIDAL ELEGANCE</em></span>
+              </div>
+              <div class="bundle-symbol">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-sparkles" />
+                </svg>
+              </div>
+              <h3 class="display">ليلة العمر</h3>
+              <p class="bundle-subtitle">بداية مشرقة لأجمل ليلة</p>
+              <ul>
+                <li>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-check" /></svg
+                  >مكياج عروس
+                </li>
+                <li>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-check" /></svg
+                  >تسريحة عروس
+                </li>
+                <li>
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-check" /></svg
+                  >تنسيق شعر ومكياج
+                </li>
+              </ul>
+              <div class="bundle-bottom">
+                <span>السعر والتفاصيل عند التواصل</span
+                ><a
+                  class="bundle-btn"
+                  href="#booking"
+                  data-request="ليلة العمر"
+                  data-kind="باقة"
+                  >اختاري هذه الباقة
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-arrow" /></svg
+                ></a>
+              </div>
+            </article>
+          </div>
+          <div class="pricing-note">
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-sparkles" />
+            </svg>
+            <span
+              >الباقات المقترحة للعرض، والأسعار النهائية ومواعيد توافرها تُحدد
+              من الصالون.</span
+            >
+          </div>
+        </div>
+      </section>
+      <section id="offers" class="section offers">
+        <div class="container">
+          <div class="offers-head reveal">
+            <div>
+              <span class="kicker">04 / عروض وتجارب خاصة</span>
+              <h2 class="section-title display">فرص أكثر <em>للدلال.</em></h2>
+              <p>
+                تجارب مقترحة تجمع خدماتكِ المفضلة. اسألي عن العروض المتاحة عند
+                طلب الموعد.
+              </p>
+            </div>
+            <span class="offer-head-stamp"
+              >SPECIAL<br />
+              MOMENTS ✳</span
+            >
+          </div>
+          <div class="offer-grid">
+            <article class="offer-card reveal">
+              <div class="offer-art">
+                <img
+                  src="assets/nails-portrait.webp"
+                  loading="lazy"
+                  width="560"
+                  height="700"
+                  alt="صورة توضيحية لعرض إطلالة يديكِ وقدميكِ"
+                /><span class="offer-chip">اقتراح مميز ✳</span>
+              </div>
+              <div class="offer-body">
+                <span class="offer-count">01 / SPECIAL EDITION</span>
+                <h3 class="display">إطلالة يديكِ وقدميكِ</h3>
+                <p>تجربة تجمع العناية بالأيدي والقدمين في موعد واحد.</p>
+                <div class="offer-tags">
+                  <span>مانيكير كلاسيك</span><span>بديكير سبا</span>
+                </div>
+                <a
+                  href="#booking"
+                  data-request="إطلالة يديكِ وقدميكِ"
+                  data-kind="عرض"
+                  class="offer-link"
+                  >استفسري عن العرض
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-arrow" /></svg
+                ></a>
+              </div>
+            </article>
+            <article class="offer-card reveal">
+              <div class="offer-art">
+                <img
+                  src="assets/facial-portrait.webp"
+                  loading="lazy"
+                  width="560"
+                  height="700"
+                  alt="صورة توضيحية لعرض ساعة لنفسكِ"
+                /><span class="offer-chip">اقتراح مميز ✳</span>
+              </div>
+              <div class="offer-body">
+                <span class="offer-count">02 / SPECIAL EDITION</span>
+                <h3 class="display">ساعة لنفسكِ</h3>
+                <p>استراحة تستحقينها، تجمع بين العناية والاسترخاء.</p>
+                <div class="offer-tags">
+                  <span>حمام مغربي</span><span>تقشير الجسم</span>
+                </div>
+                <a
+                  href="#booking"
+                  data-request="ساعة لنفسكِ"
+                  data-kind="عرض"
+                  class="offer-link"
+                  >استفسري عن العرض
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-arrow" /></svg
+                ></a>
+              </div>
+            </article>
+            <article class="offer-card reveal">
+              <div class="offer-art">
+                <img
+                  src="assets/bride-portrait.webp"
+                  loading="lazy"
+                  width="560"
+                  height="700"
+                  alt="صورة توضيحية لعرض تألّقي في مناسبتكِ"
+                /><span class="offer-chip">اقتراح مميز ✳</span>
+              </div>
+              <div class="offer-body">
+                <span class="offer-count">03 / SPECIAL EDITION</span>
+                <h3 class="display">تألّقي في مناسبتكِ</h3>
+                <p>تنسيق إطلالة لافتة من تسريحة الشعر حتى المكياج.</p>
+                <div class="offer-tags">
+                  <span>مكياج سهرة</span><span>تسريحة مناسبات</span>
+                </div>
+                <a
+                  href="#booking"
+                  data-request="تألّقي في مناسبتكِ"
+                  data-kind="عرض"
+                  class="offer-link"
+                  >استفسري عن العرض
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-arrow" /></svg
+                ></a>
+              </div>
+            </article>
+          </div>
+          <div class="offers-disclaimer">
+            العروض المعروضة أفكار مقترحة وليست خصومات أو أسعارًا مؤكدة. يتم
+            اعتماد أي عرض قبل نشره رسميًا.
+          </div>
+        </div>
+      </section>
+      <section class="section gallery" id="gallery">
+        <div class="container">
+          <div class="section-head split reveal">
+            <div>
+              <span class="kicker">05 / لحظات من الجمال</span>
+              <h2 class="section-title display">
+                الجمال يسكن <em>التفاصيل.</em>
+              </h2>
+            </div>
+            <p>
+              مشاهد تصورية مستوحاة من عالم لافيا، تبرز عناية الشعر والأظافر
+              والبشرة والعرائس.
+            </p>
+          </div>
+          <div class="gallery-grid">
+            <figure class="gallery-tile reveal">
+              <img
+                src="assets/hero-portrait.webp"
+                alt="تصور لخدمة تصفيف الشعر"
+                loading="lazy"
+              />
+              <figcaption>شعر يلفت الأنظار <span>01</span></figcaption>
+            </figure>
+            <figure class="gallery-tile reveal">
+              <img
+                src="assets/nails-portrait.webp"
+                alt="تصور لخدمة العناية بالأظافر"
+                loading="lazy"
+              />
+              <figcaption>أناقة التفاصيل <span>02</span></figcaption>
+            </figure>
+            <figure class="gallery-tile reveal">
+              <img
+                src="assets/facial-portrait.webp"
+                alt="تصور لعناية البشرة"
+                loading="lazy"
+              />
+              <figcaption>دلال يستحق وقته <span>03</span></figcaption>
+            </figure>
+            <figure class="gallery-tile reveal">
+              <img
+                src="assets/bride-portrait.webp"
+                alt="تصور لتجهيز عروس"
+                loading="lazy"
+              />
+              <figcaption>ليلة لا تُنسى <span>04</span></figcaption>
+            </figure>
+          </div>
+          <p class="gallery-caption-note">
+            الصور تصورية مولدة خصيصًا للهوية البصرية، وليست صورًا موثقة من
+            الصالون.
+          </p>
+        </div>
+      </section>
+      <section class="booking" id="booking">
+        <div class="container booking-layout">
+          <div class="booking-intro reveal">
+            <span class="kicker light">06 / موعدكِ مع الجمال</span>
+            <h2 class="display">جاهزة <em>لوقتكِ الجميل؟</em></h2>
+            <p>
+              اختاري الخدمة أو الباقة والموعد المفضل لديكِ، وسنجهّز تفاصيل الطلب
+              لتتمكني من إرسالها إلى الصالون.
+            </p>
+            <div class="booking-steps">
+              <div>
+                <b>01</b
+                ><span
+                  ><strong>اختاري ما تحبين</strong
+                  ><small>من خدماتنا أو باقاتنا</small></span
+                >
+              </div>
+              <div>
+                <b>02</b
+                ><span
+                  ><strong>حددي موعدكِ</strong
+                  ><small>اليوم والوقت المناسب لكِ</small></span
+                >
+              </div>
+              <div>
+                <b>03</b
+                ><span
+                  ><strong>راجعي طلبكِ</strong
+                  ><small>انسخي التفاصيل لإرسالها للصالون</small></span
+                >
+              </div>
+            </div>
+            <p class="booking-notice">
+              <svg class="icon" aria-hidden="true"><use href="#i-clock" /></svg>
+              لا يتم تأكيد المواعيد تلقائيًا؛ يجب الرجوع إلى الصالون للتحقق من
+              التوفر.
+            </p>
+          </div>
+          <form class="booking-form reveal" id="bookingForm" novalidate>
+            <div class="form-heading">
+              <span class="form-heading-icon"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#i-calendar" /></svg
+              ></span>
+              <div>
+                <small>REQUEST AN APPOINTMENT</small>
+                <h3 class="display">احجزي لحظتكِ</h3>
+              </div>
+            </div>
+            <div class="form-row">
+              <label
+                >الاسم الكامل <span>*</span
+                ><input
+                  id="customerName"
+                  name="name"
+                  type="text"
+                  required
+                  minlength="2"
+                  maxlength="80"
+                  autocomplete="name"
+                  placeholder="اسمكِ الكريم" /></label
+              ><label
+                >رقم الجوال <span>*</span
+                ><input
+                  id="customerPhone"
+                  name="phone"
+                  type="tel"
+                  inputmode="tel"
+                  dir="ltr"
+                  required
+                  placeholder="05XXXXXXXX"
+                  autocomplete="tel"
+              /></label>
+            </div>
+            <div class="form-row">
+              <label
+                >القسم <span>*</span
+                ><select id="bookingCategory" required>
+                  <option value="">اختاري القسم</option>
+                  <option value="manicure">المناكير</option>
+                  <option value="pedicure">البديكير والعناية بالقدمين</option>
+                  <option value="brows">الحواجب والوجه</option>
+                  <option value="hair">الشعر</option>
+                  <option value="skin">البشرة</option>
+                  <option value="spa">الجسم والسبا</option>
+                  <option value="wax">الواكس وإزالة الشعر</option>
+                  <option value="bridal">المناسبات والتجميل</option>
+                  <option value="package">الباقات</option>
+                  <option value="offer">العروض</option>
+                </select></label
+              ><label
+                >الخدمة / الباقة <span>*</span
+                ><select id="bookingService" required disabled>
+                  <option value="">اختاري القسم أولًا</option>
+                </select></label
+              >
+            </div>
+            <div class="form-row">
+              <label
+                >التاريخ المناسب <span>*</span
+                ><input id="bookingDate" type="date" required /></label
+              ><label
+                >الوقت المفضّل <span>*</span
+                ><select id="bookingTime" required>
+                  <option value="">اختاري الوقت</option>
+                  <option value="09:00">09:00</option>
+                  <option value="10:00">10:00</option>
+                  <option value="11:00">11:00</option>
+                  <option value="12:00">12:00</option>
+                  <option value="13:00">13:00</option>
+                  <option value="14:00">14:00</option>
+                  <option value="15:00">15:00</option>
+                  <option value="16:00">16:00</option>
+                  <option value="17:00">17:00</option>
+                  <option value="18:00">18:00</option>
+                  <option value="19:00">19:00</option>
+                  <option value="20:00">20:00</option>
+                  <option value="21:00">21:00</option>
+                </select></label
+              >
+            </div>
+            <label class="form-notes"
+              >هل هناك تفاصيل أخرى؟ <span class="optional">اختياري</span
+              ><textarea
+                id="bookingNotes"
+                maxlength="500"
+                rows="3"
+                placeholder="أي تفاصيل أو استفسار تحبين إضافته..."
+              ></textarea>
+            </label>
+            <p class="form-error" id="formError" role="alert" hidden></p>
+            <button class="btn btn-berry form-submit" type="submit">
+              تجهيز طلب الموعد
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg>
+            </button>
+            <p class="form-fine">
+              لن يُرسل طلبكِ تلقائيًا. ستظهر لكِ نافذة لنسخ التفاصيل ومشاركتها.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-identity">
+            <a class="brand" href="#home"
+              ><span class="brand-icon">ل</span
+              ><span
+                ><strong class="display">لافيا</strong
+                ><small>LAVIA BEAUTY LOUNGE</small></span
+              ></a
+            >
+            <p>
+              كل التفاصيل الجميلة تبدأ بلحظة تخصّكِ وحدكِ. اختاري العناية التي
+              تحبينها ودعي الأناقة ترافق يومكِ.
+            </p>
+          </div>
+          <div class="footer-links">
+            <h4>اكتشفي</h4>
+            <a href="#services">خدمات الصالون</a><a href="#packages">الباقات</a
+            ><a href="#offers">العروض</a>
+          </div>
+          <div class="footer-links">
+            <h4>من عالمنا</h4>
+            <a href="#moments">تجارب الجمال</a><a href="#gallery">معرض الصور</a
+            ><a href="#booking">طلب موعد</a>
+          </div>
+          <div class="footer-contact">
+            <h4>نلتقي قريبًا</h4>
+            <p>نسعد باستفساراتكِ وطلبات الحجز.</p>
+            <a href="#booking" class="footer-contact-link"
+              >اطلبي موعدًا
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg
+            ></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="year">2026</span> لافيا. جميع الحقوق محفوظة.</span
+          ><span>صُمّم بعناية، لكل تفاصيلكِ ✳</span>
+        </div>
+      </div>
+    </footer>
+    <a href="#booking" class="mobile-sticky"
+      ><svg class="icon" aria-hidden="true"><use href="#i-calendar" /></svg
+      ><span>احجزي موعدكِ الآن</span
+      ><svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg
+    ></a>
+    <div id="modalBackdrop" class="modal-backdrop" hidden></div>
+    <div
+      id="bookingModal"
+      class="booking-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      aria-hidden="true"
+      inert
+    >
+      <button
+        id="closeModal"
+        type="button"
+        class="modal-close"
+        aria-label="إغلاق الملخص"
+      >
+        <svg class="icon" aria-hidden="true">
+          <use href="#i-close" />
+        </svg></button
+      ><span class="modal-icon"
+        ><svg class="icon" aria-hidden="true"><use href="#i-check" /></svg
+      ></span>
+      <h3 id="modalTitle" class="display">تفاصيل طلبكِ جاهزة</h3>
+      <p>
+        راجعي التفاصيل وانسخيها لإرسالها إلى الصالون. لم يتم إرسال الطلب أو
+        تأكيد الموعد حتى الآن.
+      </p>
+      <div class="modal-summary" id="modalSummary"></div>
+      <button class="btn btn-berry" id="copyBooking" type="button">
+        نسخ تفاصيل الطلب
+        <svg class="icon" aria-hidden="true"><use href="#i-copy" /></svg>
+      </button>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <!-- ═══════ PWA — تسجيل + نافذة التثبيت ═══════ -->
+<script>
+(function () {
+  'use strict';
+
+  // 1. تسجيل Service Worker
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('./sw.js', { scope: './' })
+        .then(function (reg) { console.log('[PWA] SW registered:', reg.scope); })
+        .catch(function (err) { console.warn('[PWA] SW failed:', err); });
+    });
+  } else {
+    console.warn('[PWA] Service Worker not supported.');
+  }
+
+  // 2. تجهيز النافذة
+  var modal = document.getElementById('pwaInstallModal');
+  if (!modal) { console.warn('[PWA] Modal not found in HTML.'); return; }
+
+  var androidBox = modal.querySelector('.pwa-android');
+  var iosBox = modal.querySelector('.pwa-ios');
+  var installBtn = modal.querySelector('.pwa-install-btn');
+  var closeEls = modal.querySelectorAll('[data-pwa-close]');
+
+  // 3. كشف المنصة
+  var ua = navigator.userAgent || '';
+  var isIOS = /iPad|iPhone|iPod/.test(ua) ||
+              (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var isStandalone = window.matchMedia('(display-mode: standalone)').matches ||
+                     window.navigator.standalone === true;
+  var isInIframe = window.self !== window.top;
+
+  console.log('[PWA] iOS:', isIOS, '| Standalone:', isStandalone, '| InIframe:', isInIframe);
+
+  // 4. حالة
+  var deferredPrompt = null;
+  var shown = false;
+  var DISMISS_KEY = 'lavia_pwa_dismissed_at';
+  var COOLDOWN = 24 * 60 * 60 * 1000;
+
+  function canShow() {
+    if (isStandalone || isInIframe) return false;
+    try {
+      var t = parseInt(localStorage.getItem(DISMISS_KEY) || '0', 10);
+      return (Date.now() - t) > COOLDOWN;
+    } catch (e) { return true; }
+  }
+
+  // 5. إظهار النافذة
+  function show() {
+    if (shown || !canShow()) return;
+    if (isIOS) {
+      if (androidBox) androidBox.hidden = true;
+      if (iosBox) iosBox.hidden = false;
+    } else if (deferredPrompt) {
+      if (androidBox) androidBox.hidden = false;
+      if (iosBox) iosBox.hidden = true;
+    } else {
+      console.log('[PWA] No install prompt yet. Waiting...');
+      return;
+    }
+    shown = true;
+    modal.hidden = false;
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('pwa-open');
+    requestAnimationFrame(function () {
+      modal.classList.add('open');
+      if (installBtn) installBtn.focus({ preventScroll: true });
+    });
+  }
+
+  // 6. إخفاء
+  function hide(persist) {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('pwa-open');
+    setTimeout(function () { modal.hidden = true; }, 350);
+    if (persist) {
+      try { localStorage.setItem(DISMISS_KEY, String(Date.now())); } catch (e) {}
+    }
+  }
+
+  // 7. استقبال حدث التثبيت
+  window.addEventListener('beforeinstallprompt', function (e) {
+    e.preventDefault();
+    deferredPrompt = e;
+    console.log('[PWA] beforeinstallprompt ✓');
+    setTimeout(show, 800);
+  });
+
+  // 8. iOS: خطوات بعد التحميل
+  if (isIOS) setTimeout(show, 1500);
+
+  // 9. نجاح التثبيت
+  window.addEventListener('appinstalled', function () {
+    console.log('[PWA] App installed ✓');
+    hide(false);
+    deferredPrompt = null;
+  });
+
+  // 10. زر التثبيت
+  if (installBtn) {
+    installBtn.addEventListener('click', async function () {
+      if (!deferredPrompt) {
+        if (androidBox) androidBox.hidden = true;
+        if (iosBox) iosBox.hidden = false;
+        return;
+      }
+      deferredPrompt.prompt();
+      try {
+        var choice = await deferredPrompt.userChoice;
+        console.log('[PWA] User choice:', choice.outcome);
+        if (choice.outcome === 'accepted') hide(false);
+        else hide(true);
+      } catch (err) { hide(true); }
+      deferredPrompt = null;
+    });
+  }
+
+  // 11. إغلاق
+  closeEls.forEach(function (el) {
+    el.addEventListener('click', function () { hide(true); });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modal.classList.contains('open')) hide(true);
+  });
+
+  // 12. أدوات اختبار (اكتبيها في Console)
+  window.laviaShowPWA = function () {
+    try { localStorage.removeItem(DISMISS_KEY); } catch (e) {}
+    shown = false;
+    show();
+  };
+  window.laviaResetPWA = function () {
+    try { localStorage.removeItem(DISMISS_KEY); } catch (e) {}
+    shown = false;
+    console.log('[PWA] Reset done.');
+  };
+})();
+</script>
+  </body>
+</html>

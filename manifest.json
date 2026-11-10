@@ -1,0 +1,29 @@
+{
+  "name": "صالون لافيا النسائي",
+  "short_name": "لافيا",
+  "description": "صالون نسائي — خدمات العناية بالشعر والبشرة والأظافر والمناسبات.",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./index.html",
+  "scope": "./",
+  "id": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FDFBF7",
+  "theme_color": "#4A2C20",
+  "categories": ["lifestyle", "beauty"],
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

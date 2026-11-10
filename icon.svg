@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- الخلفية باللون الكبدي الفاخر -->
+  <rect width="512" height="512" rx="110" fill="#4A2C20" />
+  
+  <!-- إطار داخلي رفيع بلون كريمي/ذهبي هادئ -->
+  <rect x="32" y="32" width="448" height="448" rx="85" fill="none" stroke="#C9A876" stroke-width="3" stroke-opacity="0.4" />
+  
+  <!-- كلمة Lavia كاميلة باللون الكريمي الفاتح -->
+  <g text-anchor="middle" font-family="&#39;Didot&#39;, &#39;Georgia&#39;, &#39;Playfair Display&#39;, serif">
+    <!-- الاسم الأساسي -->
+    <text x="256" y="300" fill="#F4EDE3" font-size="120" font-weight="bold" letter-spacing="6">Lavia</text>
+    
+    <!-- خط ديكوري متناسق -->
+    <path d="M 160 335 L 352 335" stroke="#C9A876" stroke-width="3" stroke-linecap="round" />
+    
+    <!-- نقطة مركزية تحت الخط -->
+    <circle cx="256" cy="360" r="5" fill="#C9A876" />
+  </g>
+  
+  <!-- لمسات جمالية دافئة بالأعلى -->
+  <circle cx="390" cy="120" r="12" fill="#C9A876" />
+  <circle cx="365" cy="100" r="6" fill="#C9A876" fill-opacity="0.6" />
+</svg>
